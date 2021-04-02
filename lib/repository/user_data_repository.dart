@@ -9,8 +9,9 @@ class UserDataRepository{
     return _userDataRepository;
   }
 
-  Future<Response> callUserDataApi() async{
-    Response response =  await NetworkCall().callGetApi();
+  Future<Response> callUserDataApi(int page) async{
+    int offset = 10 * page;
+    Response response =  await NetworkCall().callGetApi(offset.toString());
     return response;
   }
 }

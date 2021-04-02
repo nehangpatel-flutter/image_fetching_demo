@@ -49,11 +49,12 @@ class Data {
 }
 
 class Users {
+  String id;
   String name;
   String image;
   List<String> items;
 
-  Users({this.name, this.image, this.items});
+  Users({this.id,this.name, this.image, this.items});
 
   Users.fromJson(Map<String, dynamic> json) {
     name = json['name'];

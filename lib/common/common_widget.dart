@@ -23,10 +23,16 @@ Widget getImageWidget(String url, BoxShape shape,{double width,double height}){
         );
       },
       errorWidget: (context,image,error){
-        return CircularProgressIndicator();
+        return Container(
+          height: height,
+            width: width,
+            child: Center(child: CircularProgressIndicator()));
       },
       placeholder: (context,image){
-        return CircularProgressIndicator();
+        return Container(
+          height: height,
+            width: width,
+            child: Center(child: CircularProgressIndicator()));
       },
   );
 }
